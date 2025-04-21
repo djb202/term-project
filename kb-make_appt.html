@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      Author: David Bell
+      Date:   2025-04-17
+
+      Filename:   kb-make_appt.html
+
+   -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Make an Appointment</title>
+   <link href="kb_styles.css" rel="stylesheet" />
+</head>
+
+<body>
+   <header>
+      <img src="kb_logo.png" alt="Kabha's Beauty" id="logo" />
+      
+      <nav class="main_nav">
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="kb-services.html">Services</a></li>
+            <li><a href="kb-make_appt.html">Make an Appointment</a></li>
+            <li><a href="kb-hist_of_henna.html">History of Henna</a></li>
+            <li><a href="kb-contact.html">Contact</a></li>
+
+         </ul>
+      </nav>
+
+   </header>
+
+   <div id="container">
+      <h1>Make an Appointment</h1>
+      <section>
+         <label for="customer">For whom:</label>
+         <input type="text" id="customer" name="customer">
+         <br>
+
+         <label for="party_size">How many in the party?:</label>
+         <input type="text" id="party_size" name="party_size">
+         <br>
+
+         <label for="phone">Phone:</label>
+         <input type="text" id="phone" name="phone">
+         <br>
+
+         <label for="email">Email:</label>
+         <input type="text" id="email" name="email">
+         <br>
+
+         <label for="service_date">Enter the date:</label>
+         <input type="text" id="service_date" name="service_date">
+         <br>
+
+         <label for="service_time">Enter the time:</label>
+         <input type="text" id="service_time" name="service_time">
+         <br>
+
+         <label for="requested_service">Choose the service:</label>
+         <select id="requested_service" name="requested_service" multiple>
+            <option value="cut-dry">Hair Cut With Blow Dry</option>
+            <option value="cut">Hair Cut Only</option>
+            <option value="makeup">Makeup</option>
+            <option value="consult">Beauty Consult</option>
+            <option value="photo">Glamor Shot</option>
+            <option value="hair_dye">Hair Dye (Floral)</option>
+            <option value="henna_hand">Henna (Hand Only)</option>
+            <option value="henna_handArm">Henna (Hand and Arm)</option>
+            <option value="henna_other">Henna (Other)</option>
+         </select>
+      </section>
+      <br>
+ 
+<p>
+Thank you for your interest.
+</p>
+<p>
+Our scheduler will respond momentarily.
+</p>
+
+      
+
+   </div>
+
+   <footer>
+      Kabha's Beauty &#183; 4040 W Devon Ave. &#183; Chicago, IL 60646 &#183; (312) 212-0818
+   </footer>
+</body>
+
+</html>

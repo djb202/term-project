@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/*
+   Author: David Bell
+   Date: 2025-04-18
+   Filename: kb_styles.css
+
+*/
+
+/* HTML and Body Styles */
+
+html {
+   background-color: rgb(113, 160, 204) 
+}
+
+/* Page Body Styles */
+
+
+body {
+   margin-left: auto;
+   margin-right: auto;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+   box-shadow: rgb(51, 51, 51) 10px 0px 25px, rgb(51, 51, 51) -10px 0px 25px;
+   width: 95%;
+   background-color: rgb(244, 245, 240);
+   font-family: Verdana, Geneva, Arial, sans-serif;   
+}
+
+body header {
+   width: 100%;
+   color: rgb(186, 186, 156);
+   background-color: rgb(71, 52, 29);   
+}
+
+body header img {
+   width: 100%;
+   object-fit: contain;
+
+}
+
+ul, ol {
+	margin: 1em 0;
+	padding: 0 0 0 40px;
+}
+dd {
+	margin: 0 0 0 40px;
+}
+nav ul, nav ol {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+   padding: 0;
+
+}
+
+nav.main_nav ul li {
+   display: block;
+   list-style-type: none;
+   color: rgb(186, 186, 156);
+   background-color: rgb(71, 52, 29);
+   text-align: center;
+
+   float: left;
+   height: 3em;
+   width: 20%;
+
+
+}
+
+nav.main_nav ul li a {
+   text-decoration: none;
+   color: rgb(186, 186, 156);
+   padding: 5px;
+   font-size: 1.2em;
+
+}
+
+nav.main_nav ul li a:hover {
+   background-color: gray;
+}
+
+/* Footer Styles */
+
+footer {
+   color: rgb(186, 186, 156);
+   background-color: rgb(71, 52, 29);
+   font-size: 0.9em;
+   padding: 1em 0;
+   text-align: center;
+}
