@@ -4,15 +4,14 @@
    <!--
       Author: David Bell
       Date:   2025-04-17
-
       Filename:   kb-contact.html
-
    -->
 
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>Contact Kabha's Beauty</title>
    <link href="kb_styles.css" rel="stylesheet" />
+   <script src="kb_contactSubmit.js"></script>
 </head>
 
 <body>
@@ -31,52 +30,55 @@
       </nav>
 
    </header>
-   <div class="contact">
-   <h1>Contact Us</h1>
-   <p>
-      <a href="mailto:david.bell@student.ccc.edu">Send us an email:</a> 
-      
-      <p>We have monthly specials!</p>
-      <p>Sign up to receive notices about pricing events and service announcemenmts.</p>
-      
-      <label for="FName">First Name:</label>
-      <input type="text" id="FName" name="FName">
-      <br>      
-      <label for="LName">Last Name:</label>
-      <input type="text" id="LName" name="LName">
-      <br>
-      <label for="MailingStreet">Street Address:</label>
-      <input type="text" id="MailingStreet" name="MailingStreet">
-      <br>
-      <label for="MailingCity">City:</label>
-      <input type="text" id="MailingCity" name="MailingCity">
-      <br>
-      <label for="State">State:</label>
-      <input type="text" id="State" name="State">
-      <br>
-      
-      <label for="ZIP">ZIP Code:</label>
-      <input type="text" id="ZIP" name="ZIP">
-      <br>
-      
-      <label for="email">Email:</label>
-      <input type="text" id="email" name="email">
-      <br>
-      
-      <label for="phone">Phone:</label>
-      <input type="text" id="phone" name="phone">
-       <br>
-      
-      <!--<label for="HowFind">How did you first hear about us?</label>
-      <select id="HowFind" name="HowFind" multiple>
-         <option value="web">Internet Search</option>
-         <option value="fb">Facebook</option>
-         <option value="boca">Word of Mouth</option>
-         <option value="print">Advertisement in Desi News</option>
-         <option value="church">Church bulletin</option>
-         <option value="flyer">Service list at Community Center</option>
-      --><br>
+
+   <div class="contact-div">
+      <h1 class="contact-h1">Contact Kabha's Beauty</h1>
+
+      <p class="contact-p">We are here for you and want to know what's on your 
+         mind. If you have a question, a concern, or a complaint, let us know. 
+         We respect you and will do everything we can for your satisfaction.</p>
+
+      <p class="contact-p">
+         <a class="contact-a" href="mailto:david.bell@student.ccc.edu">Send us an email</a>
       </p>
+
+      <p class="contact-p">We also want to share good news and bargains with our
+         loyal customers. We send out information about 
+         specials and new offerings. So please let us know how to
+         reach you!</p>
+      
+      <form 
+         class="contact-form" 
+         id="contactKhabas" 
+         action="https://wwww.phonyWebService.net/david/appointment" 
+         method="post" 
+         enctype="application/x-www-form-urlencoded">
+
+         <label class="contact-label" for="contact-FName">First Name</label>
+         <input class="contact-input" type="text" id="contact-FName" name="FName">
+
+         <label class="contact-label" for="contact-LName">Last Name</label>
+         <input class="contact-input" type="text" id="contact-LName" name="LName" required>
+
+         <label class="contact-label" for="contact-MailingPostCode">ZIP Code</label>
+         <input class="contact-input" type="text" id="contact-MailingPostCode" 
+            name="ZIP Code">
+
+         <label class="contact-label" for="contact-email">Email</label>
+         <input class="contact-input" type="email" id="contact-email" 
+            placeholder="yoshi.jones@gmail.com" 
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" name="email" required>
+         
+         <label class="contact-label" for="contact-Phone">Phone</label>
+         <input class="contact-input" type="tel" id="contact-Phone" 
+            placeholder="nnn-nnn-nnnn" name="phone">
+
+         <div class="contact-buttons">
+            <input class="contact-button" id="contact-submit" value="Get on the List!" type="submit">
+            <input class="contact-button" id="contact-reset" value="Clear" type="reset">
+         </div>
+      </form>
+
    </div>
 </body> 
 <footer>

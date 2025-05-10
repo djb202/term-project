@@ -1,4 +1,11 @@
 @charset "utf-8";
+@font-face {
+   font-family: Gabriola;
+   font-style: normal;
+   font-weight: normal;
+   src: local(Gabriola), url('gabriola Font Download.woff') format('woff'), 
+   url('gabriola Font Download.ttf') format('truetype');
+}
 
 /*
    Author: David Bell
@@ -17,75 +24,445 @@ html {
 
 
 body {
+   color: rgb(34, 34, 34);
    margin-left: auto;
    margin-right: auto;
    border-left: 1px solid black;
    border-right: 1px solid black;
    box-shadow: rgb(51, 51, 51) 10px 0px 25px, rgb(51, 51, 51) -10px 0px 25px;
-   width: 95%;
+   width: 81%;
+   padding-left: 5%;
+   padding-right: 4%;
    background-color: rgb(244, 245, 240);
-   font-family: Verdana, Geneva, Arial, sans-serif;   
+   font-family: Verdana, Geneva, Arial, sans-serif;
+   font-size: 1em;
+   line-height: 1.4;
+   
 }
 
 body header {
+   display: block;
    width: 100%;
    color: rgb(186, 186, 156);
-   background-color: rgb(71, 52, 29);   
+   background-color: rgb(91, 73, 63);
 }
 
 body header img {
    width: 100%;
    object-fit: contain;
+}
+
+body div {
+   display: block;
+   background-color: rgb(244, 245, 240);
+   width: 72%;
+   float: left;
+   margin: 0px auto;
+}
+
+/* =============================================
+   styles for the div element 
+
+   =============================================
+*/
+
+#container_0 {
+
+   background-image: url("background.png");
+   background-color: rgb(204, 255, 204); 
+   background-repeat: repeat;
+   background-blend-mode: lighten;
+   /* width: 100%; */
+}
+
+#container_1 {
+   width: 90%;
+   float: none;
+   background-image: url("background.png");
+   background-color: rgb(204, 255, 204);
+   background-repeat: repeat;
+   background-blend-mode: lighten;
+}
+
+
+p.pAbout {
+   display: block;
+   height: 75px;
+   padding: 15px;
+   border: 1px solid rgb(91, 73, 63);
+   border-radius: 0.5rem;
+   width: 80%;
 
 }
 
-ul, ol {
-	margin: 1em 0;
-	padding: 0 0 0 40px;
+p.pAbout:nth-of-type(odd) {
+   background-color: rgb(189, 115, 117);
+   float: left;
 }
-dd {
-	margin: 0 0 0 40px;
+
+p.pAbout:nth-of-type(even) {
+   background-color: rgb(230, 195, 0);
+   float: right;
 }
+
+nav {
+   display: block;
+   background-color: rgb(244, 245, 240);
+	width: 25%;
+	float: left;
+	margin: 6% 2% 0% 0%;
+}
+
 nav ul, nav ol {
 	list-style: none;
 	list-style-image: none;
 	margin: 0;
    padding: 0;
-
 }
 
-nav.main_nav ul li {
-   display: block;
-   list-style-type: none;
-   color: rgb(186, 186, 156);
-   background-color: rgb(71, 52, 29);
-   text-align: center;
-
-   float: left;
-   height: 3em;
-   width: 20%;
-
-
-}
-
-nav.main_nav ul li a {
+nav ul li a {
+   color: rgb(34, 34, 34);
    text-decoration: none;
-   color: rgb(186, 186, 156);
-   padding: 5px;
-   font-size: 1.2em;
+   display: block;
+   margin-bottom: 12%;
+}
+
+/* =============================================
+   serviceList styles   
+   =============================================
+*/
+article.ourServices h1 {
+   text-align: center;
+}
+div.serviceList {
+   display: block;
+   float: left;
+   padding: .5% .5% .5% 1em;
+   border: 3px solid rgb(91, 73, 63);
+	columns: 25em;
+	column-gap: 7em;
+	column-rule: 1px solid gray;
+	border-radius: 0.5rem;
+   width: 68%;
+   margin-bottom: 2%;
+   background-image: url("background2.png");
+   background-color: rgb(255, 187, 185);
+   background-repeat: repeat;
+   background-blend-mode: lighten;
+   margin-left: auto;
+   margin-right: auto;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+   box-shadow: rgb(51, 51, 51) 10px 0px 25px, rgb(51, 51, 51) -10px 0px 25px;
+
+}
+div.topLevel {
+   font-size: 1.25em;
+   font-weight: 900;
+   width: 100%;
+   background-image: url("background2.png");
+   background-color: rgb(255, 187, 185);
+   background-repeat: repeat;
+   background-blend-mode: lighten;
 
 }
 
-nav.main_nav ul li a:hover {
-   background-color: gray;
+ul.services {
+   font-size: 1em;
+   font-weight: 700;
+   margin-top: 1em;
+   padding: 0;
+   & > li {
+      display: block;
+      list-style-type: none;
+      font-size: 1em;
+      font-weight: 500;
+      padding: 0px 10px;
+      margin: 0;
+
+   }
+}
+
+/* =============================================
+	styles for Make an Appointment form
+   =============================================
+*/
+
+/* Form Layout Styles */
+
+div.formRow {
+   display: flex;
+   flex-flow: row wrap;
+   margin: 5px 0px;
+}
+
+div.formRow > * {
+   flex: 1 1 150px;
+}
+
+form#makeAppointment {
+   display: flex;
+   flex-flow: row wrap;
+   
+}
+
+form#makeAppointment > fieldset {
+   border-radius: 5px;
+   flex: 1 1 300px;
+   font-size: 0.85em;
+   padding: 10px;
+   margin: 5px 0px;
+}
+form#makeAppointment label {
+   padding-bottom: 1px;
+}
+
+/* Form Styles */
+div.formRow input {
+   color: rgb(48, 44, 77);
+
+}
+div.formRow option {
+   color: rgb(48, 44, 77);
+
+}
+
+/* Legend Styles */
+legend {
+   background-color: rgb(255, 187, 185);
+   border-radius: 5px;
+   padding: 5px;
+}
+
+section.makeAnAppointment {
+   width: 72%;
+   margin: 5px auto;
+}
+
+section.makeAnAppointment h1 {
+   font-family: Verdana, Geneva, Arial, sans-serif;
+   font-size: 2.5em;
+   color: rgb(34, 34, 34);
+   margin-bottom: 35px;
+}
+
+section.makeAnAppointment p {
+   line-height: 1.4em;
+   float: none;
+   margin: 15px 0px;
+}
+
+/* Form Button Styles */
+div#buttons {
+   text-align: center;
+   width: 100%;
+}
+input[type='submit'], input[type='reset']  {
+   background-color: rgb(255, 187, 185);
+   font-size: 1em;
+   padding: 2px;
+   margin: 12px;
+
 }
 
 /* Footer Styles */
 
 footer {
+   clear: left;
+   display: block;
    color: rgb(186, 186, 156);
-   background-color: rgb(71, 52, 29);
+   background-color: rgb(91, 73, 63);
    font-size: 0.9em;
    padding: 1em 0;
    text-align: center;
+}
+
+/* =============================================
+	layout styles for the history page.
+   =============================================
+*/
+
+.hist-h1 {
+   margin-block: 0 var(--spacing-r);
+   border-bottom: 3px solid rgb(91, 73, 63);
+   font-family: Gabriola;
+   font-weight: 800;
+   font-size: 1em;
+}
+
+.hist-p {
+   margin-bottom: .25em;
+   orphans: 3;
+}
+
+.hist-p a {
+   text-decoration: none;
+   color: rgb(189, 115, 117);
+}
+
+.hist-p a:hover {
+   text-decoration: underline;
+   color: rgb(230, 195, 0);
+}
+
+.hist-p + p {
+   text-indent: 2ch;
+}
+
+.hist-main {
+   margin-top: .5%;
+   margin-bottom: .25%;
+   container-type: inline-size;
+   column-width: 18em;
+   column-gap: 3em;
+   column-rule: 1px solid rgb(186, 186, 156)
+}
+
+.hist-h1 {
+   column-span: all;
+   margin-bottom: .25%;
+   font-size: clamp(5em, 5em + 1.2288cqi, 6em);
+}
+
+/* =============================================
+	layout and styles for the contact page
+   =============================================
+*/
+
+.contact-a {
+   padding: 3px;
+   text-decoration: none;
+   background-color:rgb(255, 187, 185);
+   border: 2px solid rgb(91, 73, 63);
+   color: rgb(48, 44, 77);
+}
+
+.contact-a:hover {
+   background-color: rgb(244, 245, 240);
+}
+
+.contact-a:focus {
+   background-color: rgb(244, 245, 240);
+}
+
+.contact-form {
+   display: block;
+   float: inherit;
+   background-color: rgb(244, 245, 240);
+   border: 2px solid rgb(91, 73, 63);
+   box-shadow: 2px 2px 3px rgb(189, 115, 117);
+   margin-top: 1em;
+   margin-bottom: 2ch;
+   padding: 2ch;
+   /* width: 100%; */
+}
+
+.contact-label {
+   display: block;
+   margin-bottom: -0.2em;
+}
+
+.contact-label:after {content: ": "}
+
+.contact-input  {
+   color: rgb(48, 44, 77);
+   font-size: large;
+   line-height: 2em;
+   width: 95%;
+}
+
+.contact-label + input  {
+   margin-bottom: 1em;
+
+}
+
+.contact-buttons {
+   width: 100%;
+   text-align: center;
+}
+
+.contact-button:hover {
+   background-color: rgb(244, 245, 240);
+}
+
+.contact-button:focus {
+   background-color: rgb(244, 245, 240);
+}
+
+#contact-submit {
+   font-size: 1.025em;
+   padding: 4px;
+}
+
+#contact-reset {
+   font-size: 1.025em;
+   padding: 4px;
+}
+
+
+
+
+/* =============================================
+	layout styles where screen width > 480px.
+   =============================================
+*/
+
+@media only screen and (min-width: 481px) {
+
+  #container_0 {
+      width: 100%;
+   }
+  
+   nav.main_nav {
+      display: table;
+      width: 100%;
+      margin: 0 auto;
+      float: none;
+   }
+   nav.main_nav ul {
+      display: table-row;
+      margin: 0;
+   }
+   nav.main_nav ul li {
+      color: rgb(186, 186, 156);
+      background-color: rgb(91, 73, 63);
+      list-style-type: none;
+      display: table-cell;
+      border: 1px solid rgb(98, 77, 67);
+      text-align: center;
+      height: 3em;
+      width: 19.7%;
+   }
+   
+   nav.main_nav ul li a {
+      text-decoration: none;
+      color: rgb(186, 186, 156);
+      margin-bottom: 0%;
+      padding: 5px;
+   }
+   
+   nav.main_nav ul li a:hover {
+      background-color: gray;
+   }
+
+   p:nth-child(even){
+      float:right;
+   }
+   p:nth-child(odd){
+      float:left;
+   }
+
+   div.serviceList {
+      float: none;
+      padding: 1.5em 1.5em 1.5em 4em;
+   }
+   section.makeAnAppointment {
+      margin: 30px 3%;
+   }
+
+   .contact-form {
+      width: 100%;
+   }
+   
+   
 }
